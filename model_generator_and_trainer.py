@@ -12,8 +12,8 @@ import cv2
 import numpy as np
 
 # Define paths
-train_path = "/content/DATASET/TRAIN"
-test_path = "/content/DATASET/TEST"
+train_path = "../acnn-repo/DATASET/TRAIN"
+test_path = "../acnn-repo/DATASET/TEST"
 
 # Data preprocessing and augmentation
 train_datagen = ImageDataGenerator(
