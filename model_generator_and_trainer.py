@@ -93,3 +93,14 @@ history = model.fit(
     validation_data=test_generator,
     verbose=1
 )
+
+# Save the model architecture as JSON
+model_json = model.to_json()
+with open("model_acnn_architecture.json", "w") as json_file:
+    json_file.write(model_json)
+
+# Save the model weights as an HDF5 file
+model.save_weights("model_acnn_weight.h5")
+
+# Optionally, save the entire model including architecture and weights in one file
+model.save("model_acnn_full.h5")
